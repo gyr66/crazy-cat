@@ -1,12 +1,22 @@
-import { createStore } from 'vuex'
+import {createStore} from "vuex";
+import {IState} from "@/types";
 
-export default createStore({
+
+export default createStore<IState>({
   state: {
+    gameConfig: {
+      obstacleCnt: 15,
+      boardHeight: 15,
+      boardWidth: 9,
+      catPosition: {
+        row: 8,
+        col: 5
+      }
+    }
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+    setGameConfig(state, config) {
+      state.gameConfig = config;
+    }
   }
 })

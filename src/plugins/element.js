@@ -1,8 +1,6 @@
 /* eslint-disable */
-import { ElButton, ElSelect, ElOption } from 'element-plus'
+import {ElButton, ElOption, ElSelect, ElInput} from 'element-plus'
 
 export default (app) => {
-  app.use(ElButton)
-  app.use(ElSelect)
-  app.use(ElOption)
+  app.use(ElButton).use(ElSelect).use(ElOption).use(ElInput)
 }
